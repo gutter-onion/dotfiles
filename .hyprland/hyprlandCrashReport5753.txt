@@ -1,0 +1,142 @@
+--------------------------------------------
+   Hyprland Crash Report
+--------------------------------------------
+Vaxry is going to be upset.
+
+Hyprland received signal 11 (Segmentation fault)
+
+Version: 03ebbe18ed8517ee22591eac82cd54322f42cb7d
+Tag: v0.34.0
+
+System info:
+	System name: Linux
+	Node name: chris-XT22
+	Release: 6.6.10-1-MANJARO
+	Version: #1 SMP PREEMPT_DYNAMIC Fri Jan  5 17:38:36 UTC 2024
+
+GPU:
+	2d:00.0 VGA compatible controller [0300]: Advanced Micro Devices, Inc. [AMD/ATI] Navi 23 [Radeon RX 6600/6600 XT/6600M] [1002:73ff] (rev c1) (prog-if 00 [VGA controller])
+
+
+os-release:
+	NAME="Manjaro Linux"
+	PRETTY_NAME="Manjaro Linux"
+	ID=manjaro
+	ID_LIKE=arch
+	BUILD_ID=rolling
+	ANSI_COLOR="32;1;24;144;200"
+	HOME_URL="https://manjaro.org/"
+	DOCUMENTATION_URL="https://wiki.manjaro.org/"
+	SUPPORT_URL="https://forum.manjaro.org/"
+	BUG_REPORT_URL="https://docs.manjaro.org/reporting-bugs/"
+	PRIVACY_POLICY_URL="https://manjaro.org/privacy-policy/"
+	LOGO=manjarolinux
+	
+
+
+Backtrace:
+	#0 | Hyprland(_Z12getBacktracev+0x62) [0x5602949e8412]
+		??
+		??:0
+	#1 | Hyprland(_ZN13CrashReporter18createAndSaveCrashEi+0x5c5) [0x5602949b58a5]
+		??
+		??:0
+	#2 | Hyprland(_Z25handleUnrecoverableSignali+0x4c) [0x56029492f5ec]
+		??
+		??:0
+	#3 | /usr/lib/libc.so.6(+0x3e710) [0x7fb9bba5c710]
+		??
+		??:0
+	#4 | /usr/lib/libwayland-server.so.0(+0x8aba) [0x7fb9bc42caba]
+		??
+		??:0
+	#5 | /usr/lib/libwayland-server.so.0(+0xd180) [0x7fb9bc431180]
+		??
+		??:0
+	#6 | /usr/lib/libwayland-server.so.0(wl_event_loop_dispatch+0xa2) [0x7fb9bc42fae2]
+		??
+		??:0
+	#7 | /usr/lib/libwayland-server.so.0(wl_display_run+0x27) [0x7fb9bc4302d7]
+		??
+		??:0
+	#8 | Hyprland(_ZN11CCompositor15startCompositorEv+0xc65) [0x560294930ef5]
+		??
+		??:0
+	#9 | Hyprland(main+0x727) [0x5602949171f7]
+		??
+		??:0
+	#10 | /usr/lib/libc.so.6(+0x27cd0) [0x7fb9bba45cd0]
+		??
+		??:0
+	#11 | /usr/lib/libc.so.6(__libc_start_main+0x8a) [0x7fb9bba45d8a]
+		??
+		??:0
+	#12 | Hyprland(_start+0x25) [0x56029492c815]
+		??
+		??:0
+
+
+Log tail:
+board layout to us and variant to  for keyboard "Logitech MX Ergo"
+[LOG] Applied config to mouse logitech-mx-ergo-1, sens 0.00
+[LOG] Applying monitor rule for DP-2
+[LOG] Not applying a new rule to DP-2 because it's already applied!
+[LOG] Applying monitor rule for DP-3
+[LOG] Not applying a new rule to DP-3 because it's already applied!
+[LOG] Applying monitor rule for DP-1
+[LOG] Set a custom mode 1920x1080@90.000000 (mode not found in monitor modes)
+[LOG] output DP-1 succeeded basic test on format DRM_FORMAT_XRGB8888
+[LOG] Monitor DP-1 -> destroyed all render data
+[LOG] arrangeMonitors: 3 to arrange
+[LOG] arrangeMonitors: DP-2 explicit [0.00, 1080.00]
+[LOG] arrangeMonitors: DP-3 explicit [1920.00, 1080.00]
+[LOG] arrangeMonitors: DP-1 explicit [3840.00, 240.00]
+[LOG] arrangeMonitors: DP-2 xwayland [0, 0.00]
+[LOG] arrangeMonitors: DP-3 xwayland [1920, 0.00]
+[LOG] arrangeMonitors: DP-1 xwayland [3840, 0.00]
+[LOG] Monitor DP-1 data dump: res 1920x1080@90.00Hz, scale 1.00, transform 3, pos 3840x240, 10b 0
+[LOG] Searching for matching rules for pia-support-tool (title: Private Internet Access: Error)
+[LOG] Searching for matching rules for Brave-browser (title: GitHub - LGFae/swww: A Solution to your Wayland Wallpaper Woes - Brave)
+[LOG] Searching for matching rules for wdisplays (title: wdisplays)
+[LOG] Searching for matching rules for Alacritty (title: Alacritty)
+[GLES2] GL_INVALID_OPERATION in glGetIntegerv(GL_IMPLEMENTATION_COLOR_READ_FORMAT: no GL_READ_BUFFER)
+[GLES2] GL_INVALID_OPERATION in glGetIntegerv(GL_IMPLEMENTATION_COLOR_READ_TYPE: no GL_READ_BUFFER)
+[GLES2] GL_INVALID_OPERATION in glGetIntegerv(GL_IMPLEMENTATION_COLOR_READ_FORMAT: no GL_READ_BUFFER)
+[GLES2] GL_INVALID_OPERATION in glGetIntegerv(GL_IMPLEMENTATION_COLOR_READ_TYPE: no GL_READ_BUFFER)
+[ERR] client requested sharing of a monitor that doesnt exist
+[LOG] Framebuffer created, status 36053
+[LOG] Framebuffer created, status 36053
+[LOG] Framebuffer created, status 36053
+[LOG] Framebuffer created, status 36053
+[LOG] Shaders initialized successfully.
+[LOG] [Window 5602973b6390: title: "Alacritty", class: Alacritty] unmapped
+[LOG] Unregistered late callbacks XDG
+[LOG] Callback 5602973b6558 -> 5602973b6550, XDG Window Late removed.
+[LOG] Callback 5602973b6690 -> 5602973b6688, XDG Window Late removed.
+[LOG] Callback 5602973b67c8 -> 5602973b67c0, XDG Window Late removed.
+[LOG] Callback 5602973b6760 -> 5602973b6758, XDG Window Late removed.
+[LOG] Callback 5602973b66f8 -> 5602973b66f0, XDG Window Late removed.
+[LOG] Callback 5602973b6830 -> 5602973b6828, XDG Window Late removed.
+[LOG] Callback 5602973b6628 -> 5602973b6620, XDG Window Late removed.
+[LOG] Callback 5602973b6bd8 -> 5602973b6bd0, XDG Window Late removed.
+[LOG] Framebuffer created, status 36053
+[LOG] On closed window, new focused candidate is [Window 560298309240: title: "wdisplays"]
+[LOG] Set keyboard focus to surface 560297fe4150, with [Window 560298309240: title: "wdisplays"]
+[LOG] Searching for matching rules for wdisplays (title: wdisplays)
+[LOG] Destroying the SubSurface tree of unmapped window [Window 5602973b6390: title: "Alacritty"]
+[LOG] Callback 56029755f288 -> 56029755f280, SurfaceTreeNode removed.
+[LOG] Callback 56029755f2f0 -> 56029755f2e8, SurfaceTreeNode removed.
+[LOG] Callback 56029755f220 -> 56029755f218, SurfaceTreeNode removed.
+[LOG] SurfaceTree Node removed
+[LOG] Callback 5602973b69d0 -> 5602973b69c8, Toplevel removed.
+[LOG] Callback 5602973b6968 -> 5602973b6960, Toplevel removed.
+[LOG] Callback 5602973b6a38 -> 5602973b6a30, Toplevel removed.
+[LOG] Callback 5602973b6c58 -> 5602973b6c50, CWLSurface removed.
+[LOG] CWLSurface 5602973b6c18 called destroy()
+[LOG] Callback 5602973b6488 -> 5602973b6480, CWindow removed.
+[LOG] Searching for matching rules for wdisplays (title: wdisplays)
+[LOG] [Window 5602973b6390: title: "Alacritty", class: ] destroyed, queueing.
+[LOG] Callback 5602973b63b8 -> 5602973b63b0, XDG Window removed.
+[LOG] Callback 5602973b6420 -> 5602973b6418, XDG Window removed.
+[LOG] Callback 5602973b64f0 -> 5602973b64e8, XDG Window removed.
+[ERR] onWindowRemovedTiling node null?

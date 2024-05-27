@@ -1,0 +1,158 @@
+--------------------------------------------
+   Hyprland Crash Report
+--------------------------------------------
+This was an accident, I swear!
+
+Hyprland received signal 6 (Aborted)
+
+Version: 03ebbe18ed8517ee22591eac82cd54322f42cb7d
+Tag: v0.34.0
+
+System info:
+	System name: Linux
+	Node name: chris-XT22
+	Release: 6.6.10-1-MANJARO
+	Version: #1 SMP PREEMPT_DYNAMIC Fri Jan  5 17:38:36 UTC 2024
+
+GPU:
+	2d:00.0 VGA compatible controller [0300]: Advanced Micro Devices, Inc. [AMD/ATI] Navi 23 [Radeon RX 6600/6600 XT/6600M] [1002:73ff] (rev c1) (prog-if 00 [VGA controller])
+
+
+os-release:
+	NAME="Manjaro Linux"
+	PRETTY_NAME="Manjaro Linux"
+	ID=manjaro
+	ID_LIKE=arch
+	BUILD_ID=rolling
+	ANSI_COLOR="32;1;24;144;200"
+	HOME_URL="https://manjaro.org/"
+	DOCUMENTATION_URL="https://wiki.manjaro.org/"
+	SUPPORT_URL="https://forum.manjaro.org/"
+	BUG_REPORT_URL="https://docs.manjaro.org/reporting-bugs/"
+	PRIVACY_POLICY_URL="https://manjaro.org/privacy-policy/"
+	LOGO=manjarolinux
+	
+
+
+Backtrace:
+	#0 | Hyprland(_Z12getBacktracev+0x62) [0x56278cf97412]
+		??
+		??:0
+	#1 | Hyprland(_ZN13CrashReporter18createAndSaveCrashEi+0x5c5) [0x56278cf648a5]
+		??
+		??:0
+	#2 | Hyprland(_Z25handleUnrecoverableSignali+0x4c) [0x56278cede5ec]
+		??
+		??:0
+	#3 | /usr/lib/libc.so.6(+0x3e710) [0x7f0bcd85c710]
+		??
+		??:0
+	#4 | /usr/lib/libc.so.6(+0x8e83c) [0x7f0bcd8ac83c]
+		??
+		??:0
+	#5 | /usr/lib/libc.so.6(raise+0x18) [0x7f0bcd85c668]
+		??
+		??:0
+	#6 | /usr/lib/libc.so.6(abort+0xd7) [0x7f0bcd8444b8]
+		??
+		??:0
+	#7 | /usr/lib/libc.so.6(+0x27390) [0x7f0bcd845390]
+		??
+		??:0
+	#8 | /usr/lib/libc.so.6(+0x987b7) [0x7f0bcd8b67b7]
+		??
+		??:0
+	#9 | /usr/lib/libc.so.6(+0x994b8) [0x7f0bcd8b74b8]
+		??
+		??:0
+	#10 | /usr/lib/libc.so.6(+0x9a49d) [0x7f0bcd8b849d]
+		??
+		??:0
+	#11 | /usr/lib/libc.so.6(+0x9ab29) [0x7f0bcd8b8b29]
+		??
+		??:0
+	#12 | /usr/lib/libc.so.6(free+0x73) [0x7f0bcd8bb353]
+		??
+		??:0
+	#13 | /usr/lib/libc.so.6(+0x9d442) [0x7f0bcd8bb442]
+		??
+		??:0
+	#14 | /usr/lib/libc.so.6(+0x8c865) [0x7f0bcd8aa865]
+		??
+		??:0
+	#15 | /usr/lib/libc.so.6(+0x1107cc) [0x7f0bcd92e7cc]
+		??
+		??:0
+
+
+Log tail:
+8 -> 5627a7a97ba0, XDG Window Late removed.
+[LOG] Callback 5627a7a97ce0 -> 5627a7a97cd8, XDG Window Late removed.
+[LOG] Callback 5627a7a97e18 -> 5627a7a97e10, XDG Window Late removed.
+[LOG] Callback 5627a7a97db0 -> 5627a7a97da8, XDG Window Late removed.
+[LOG] Callback 5627a7a97d48 -> 5627a7a97d40, XDG Window Late removed.
+[LOG] Callback 5627a7a97e80 -> 5627a7a97e78, XDG Window Late removed.
+[LOG] Callback 5627a7a97c78 -> 5627a7a97c70, XDG Window Late removed.
+[LOG] Callback 5627a7a98228 -> 5627a7a98220, XDG Window Late removed.
+[LOG] Framebuffer created, status 36053
+[LOG] Removing last node (dwindle)
+[LOG] On closed window, new focused candidate is [Window nullptr]
+[LOG] Destroying the SubSurface tree of unmapped window [Window 5627a7a979e0: title: "Alacritty"]
+[LOG] Callback 56278f1a4608 -> 56278f1a4600, SurfaceTreeNode removed.
+[LOG] Callback 56278f1a4670 -> 56278f1a4668, SurfaceTreeNode removed.
+[LOG] Callback 56278f1a45a0 -> 56278f1a4598, SurfaceTreeNode removed.
+[LOG] SurfaceTree Node removed
+[LOG] Callback 5627a7a98020 -> 5627a7a98018, Toplevel removed.
+[LOG] Callback 5627a7a97fb8 -> 5627a7a97fb0, Toplevel removed.
+[LOG] Callback 5627a7a98088 -> 5627a7a98080, Toplevel removed.
+[LOG] Callback 5627a7a982a8 -> 5627a7a982a0, CWLSurface removed.
+[LOG] CWLSurface 5627a7a98268 called destroy()
+[LOG] Callback 5627a7a97ad8 -> 5627a7a97ad0, CWindow removed.
+[LOG] [Window 5627a7a979e0: title: "Alacritty", class: ] destroyed, queueing.
+[LOG] Callback 5627a7a97a08 -> 5627a7a97a00, XDG Window removed.
+[LOG] Callback 5627a7a97a70 -> 5627a7a97a68, XDG Window removed.
+[LOG] Callback 5627a7a97b40 -> 5627a7a97b38, XDG Window removed.
+[ERR] onWindowRemovedTiling node null?
+[LOG] Cleanup: destroyed a window
+[LOG] Switching from VT 1 to VT 2
+[LOG] Switched to VT 2, destroyed all render data, frames to skip for each: 2
+[WARN] Attempted to render frame on inactive session!
+[WARN] Attempted to render frame on inactive session!
+[LOG] Callback 56278eeaf048 -> 56278eeaf040, Keyboard removed.
+[LOG] Callback 56278eeaef10 -> 56278eeaef08, Keyboard removed.
+[LOG] Callback 56278eeaef78 -> 56278eeaef70, Keyboard removed.
+[LOG] Callback 56278eeaefe0 -> 56278eeaefd8, Keyboard removed.
+[LOG] Destroyed keyboard 56278eeaeee0
+[LOG] Callback 56278f1615e8 -> 56278f1615e0, Keyboard removed.
+[LOG] Callback 56278f1614b0 -> 56278f1614a8, Keyboard removed.
+[LOG] Callback 56278f161518 -> 56278f161510, Keyboard removed.
+[LOG] Callback 56278f161580 -> 56278f161578, Keyboard removed.
+[LOG] Destroyed keyboard 56278f161480
+[LOG] Callback 56278efb1298 -> 56278efb1290, Mouse removed.
+[LOG] Callback 56278efb5008 -> 56278efb5000, Keyboard removed.
+[LOG] Callback 56278efb4ed0 -> 56278efb4ec8, Keyboard removed.
+[LOG] Callback 56278efb4f38 -> 56278efb4f30, Keyboard removed.
+[LOG] Callback 56278efb4fa0 -> 56278efb4f98, Keyboard removed.
+[LOG] Destroyed keyboard 56278efb4ea0
+[LOG] Callback 56278efa3f38 -> 56278efa3f30, Keyboard removed.
+[LOG] Callback 56278efa3e00 -> 56278efa3df8, Keyboard removed.
+[LOG] Callback 56278efa3e68 -> 56278efa3e60, Keyboard removed.
+[LOG] Callback 56278efa3ed0 -> 56278efa3ec8, Keyboard removed.
+[LOG] Destroyed keyboard 56278efa3dd0
+[LOG] Callback 56278ecd8678 -> 56278ecd8670, Keyboard removed.
+[LOG] Callback 56278ecd8540 -> 56278ecd8538, Keyboard removed.
+[LOG] Callback 56278ecd85a8 -> 56278ecd85a0, Keyboard removed.
+[LOG] Callback 56278ecd8610 -> 56278ecd8608, Keyboard removed.
+[LOG] Destroyed keyboard 56278ecd8510
+[LOG] Callback 56278f1270f8 -> 56278f1270f0, Keyboard removed.
+[LOG] Callback 56278f126fc0 -> 56278f126fb8, Keyboard removed.
+[LOG] Callback 56278f127028 -> 56278f127020, Keyboard removed.
+[LOG] Callback 56278f127090 -> 56278f127088, Keyboard removed.
+[LOG] Destroyed keyboard 56278f126f90
+[LOG] Callback 56278ef78708 -> 56278ef78700, Keyboard removed.
+[LOG] Callback 56278ef785d0 -> 56278ef785c8, Keyboard removed.
+[LOG] Callback 56278ef78638 -> 56278ef78630, Keyboard removed.
+[LOG] Callback 56278ef786a0 -> 56278ef78698, Keyboard removed.
+[LOG] Destroyed keyboard 56278ef785a0
+[LOG] Session got activated!
+[LOG] Hyprland received signal 15
