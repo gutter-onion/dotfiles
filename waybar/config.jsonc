@@ -1,0 +1,85 @@
+{
+  "layer": "top", // Waybar at top layer
+  // "position": "bottom", // Waybar position (top|bottom|left|right)
+  "height": 30, // Waybar height (to be removed for auto height)
+  // "width": 1280, // Waybar width
+  "spacing": 4, // Gaps between modules (4px)
+  // Choose the order of the modules
+  "modules-left": ["disk", "disk#disk2", "hyprland/workspaces"],
+  "modules-center": ["hyprland/window"],
+  "modules-right": ["tray", "pulseaudio", "clock"],
+  // Modules configuration
+"disk": {
+	"interval": 30,
+	"format": "{path} {percentage_used}% ",
+	"path": "/home",
+	"on-click": "alacritty -o 'window.opacity=0.4' -e yazi"
+  },
+"disk#disk2": {
+	"interval": 30,
+	"format": " {path} {percentage_used}%  ",
+	"path": "/",
+	"on-click": "alacritty -o 'window.opacity=0.4' -e yazi"
+  },
+  "hyprland/workspaces": {
+    "all-outputs": true,
+    "format": "{icon}",
+    "on-click": "activate"
+  },
+  "keyboard-state": {
+    "numlock": true,
+    "capslock": true,
+    "format": "{name} {icon}",
+    "format-icons": {
+      "locked": "",
+      "unlocked": ""
+    }
+  },
+  "hyprland/window": {
+    "tooltip": true
+  },
+  "tray": {
+    // "icon-size": 21,
+    "spacing": 10
+  },
+  "clock": {
+    // "timezone": "America/New_York",
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+    "format": "<span color='#ffffff'>{:%H:%M %m/%d/%Y}</span>",
+    "on-click": "thunderbird"
+  },
+  "pulseaudio": {
+    // "scroll-step": 1, // %, can be a float
+    "format": "{icon}   {volume}% {format_source}",
+    "format-bluetooth": "{volume}% {icon} {format_source}",
+    "format-bluetooth-muted": " {icon} {format_source}",
+    "on-scroll-up": "pamixer --allow-boost -i 5",
+    "on-scroll-down": "pamixer --allow-boost -d 5",
+    "format-muted": " {format_source}",
+    "format-source": " {volume}%",
+    "format-source-muted": "",
+    "format-icons": {
+      "headphone": "",
+      "hands-free": "",
+      "headset": "",
+      "phone": "",
+      "portable": "",
+      "car": "",
+      "default": ["", "", ""]
+    },
+    "on-click": "pavucontrol",
+    "tooltip": false
+  },
+  "custom/media": {
+    "format": "{icon} {}",
+    "return-type": "json",
+    "max-length": 40,
+    "format-icons": {
+      "spotify": "",
+      "default": "🎜"
+    },
+    "escape": true,
+    "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
+    // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
+  }
+}

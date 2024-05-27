@@ -1,0 +1,52 @@
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\]-.,,ABCDFGHJAbcd rtuooooooooooooooooppppppptuzwxyzzzzzzzzzzzzzzzzzzzzzzzzzzz78 e# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
+
+# The following lines were added by compinstall
+
+zstyle ':completion:*' completer _complete _       ignored
+zstyle :compinstall filename '/home/chris/.zshrc'
+#theme
+ZSH_THEME="powerlevel10k/powerlevel10k"
+
+#aliases
+alias ls="lsd -a"
+alias blue="cd /mnt/blue"
+alias thicc="cd /mnt/thicc"
+alias chink="cd /mnt/chink"
+alias slow="cd /mnt/slow"
+alias sudo='sudo -p "DO AS I SAY, COMPUTER! (enter password for '$USER'):"'
+alias inject='sudo fusee-interfacee-tk '
+alias nsp='sudo ns-usbloader'
+
+autoload -Uz compinit
+compinit
+# End of lines added by compinstall
+# Lines configured by zsh-newuser-install
+HISTFILE=~/.histfile
+HISTSIZE=1000
+SAVEHIST=1000
+bindkey -v
+# End of lines configured by zsh-newuser-install
+source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
+
+bindkey  "^[[H"   beginning-of-line
+bindkey  "^[[F"   end-of-line
+bindkey  "^[[3~"  delete-char
+
+autoload -Uz compinit && compinit
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
+k i8kl;
+neofetch && sensors | grep -E -A 0 'Tc|jun' | cut -c1-22 | sed -e 's/^/                                        /'
+ 87[[[[[[[[[[[[[[[[[[[[[[[[[[[[[\
+immkjnh.m jmju777799999999999999999999999999999999999999999999999999999pl;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;lllllll\
+;yg,ymhmghhgkgggggggggggggggggggggggggggg4555555555555rdgmmv                                                                                                                                                                                                      c ybuh gb6yuh78yy67myy 
